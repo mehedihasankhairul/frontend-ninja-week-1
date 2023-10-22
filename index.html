@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week-1 Test</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+      const mainContainer = document.getElementById("root");
+      const element = React.createElement(
+        "div",
+        { className: "wrapper" },
+        React.createElement(
+          "div",
+          { className: "parent" },
+          React.createElement("h1", { className: "parent-title" }, "I'm a parent!"),
+          React.createElement("p", { className: "paragraph" }, "I'm Paragraph")
+        ),
+        React.createElement(
+          "div",
+          { className: "parent-two" },
+          React.createElement("h1", { className: "parent-title-two" }, "I'm a parent Two!"),
+          React.createElement("p", { className: "paragraph-two" }, "I'm Paragraph Two")
+        )
+      );
+
+      ReactDOM.render(element, mainContainer);
+    </script>
+  </body>
+</html>
